@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>home</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <form class="find-form" action="/identification" method="get">
+        <input th:value="${side1}" name="side1" type="number">
+        <input th:value="${side2}" name="side2" type="number">
+        <input th:value="${side3}" name="side3" type="number">
+        <button type="sumbit">identify</button>
+    </form>
+    <div th:text="'Равносторонний: ' + ${equilateral}"/>
+    <div th:text="'Равнобедренный: ' + ${isosceles}"/>
+    <div th:text="'Прямоугольный: ' + ${rectangular}"/>
+</body>
+</html>
